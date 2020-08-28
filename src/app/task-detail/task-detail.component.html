@@ -1,0 +1,26 @@
+<div *ngIf="!selectedId">
+    <p class="alert alert-danger">
+        لا يوجد اي مهمة مطابقة
+    </p>
+</div>
+
+
+
+
+
+
+<div class="form-group" *ngIf="selectedId">
+    <label for="Title">Title:</label>
+    <input #title type="text" [(ngModel)]="taskData.title" class="form-control" id="Title">
+
+
+    <label for="description">description:</label>
+    <textarea #desc class="form-control" [(ngModel)]="taskData.description" rows="5" id="description"></textarea>
+
+
+    <button type="button" class="btn btn-primary mt-2 mr-2" (click)="onUpdate( )">Update</button>
+    <button type="button" class="btn btn-primary mt-2 mr-2" (click)="onDelete()">Delete</button>
+
+    <a routerLink="/tasks" class=" btn btn-danger mt-2">Cancel</a>
+
+</div>

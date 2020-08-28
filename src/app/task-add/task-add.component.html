@@ -1,0 +1,13 @@
+<div class="form-group">
+    <label for="Title">Title:</label>
+    <input #title type="text" class="form-control" id="Title">
+
+
+    <label for="description">description:</label>
+    <textarea #desc class="form-control" rows="5" id="description"></textarea>
+
+
+    <button type="button" class="btn btn-primary mt-2 mr-2" (click)="onSave(title.value,desc.value)">Sava</button>
+    <a routerLink="/tasks" class=" btn btn-danger mt-2">Cancel</a>
+
+</div>
